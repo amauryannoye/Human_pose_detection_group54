@@ -1,7 +1,9 @@
 # Human_pose_detection_group54
 
 This repository contains the implementation of OpenPifPaf, an open-source framework for pose estimation, using the COCO dataset. OpenPifPaf provides a powerful and flexible solution for detecting keypoints and generating human pose estimations.
-![alt text](openpose2.jpg)
+
+![alt text](openpose2.png)
+
 ## Introduction
 For our Deep Learning for Autonomous Vehicles class, we had to solve a task which was part of an autonomous driving vehicle. We chose the task about the 2D human pose detection for which we had to predict the pose of a human body in a given 2D image. This includes the positions and orientations of various body parts, such as the head, shoulders, elbows, wrists, hips, knees, and ankles. In order to do that, we will start from a state-of-the-art deep learning model, OpenPifPaf, desgined to detect and estimate the poses of multiple people in 2D images. We will use the MS COCO dataset, usually used for various computer vision tasks
 
@@ -67,7 +69,7 @@ Make sure the downloaded weights match the selected HRFormer backbone (HRFormer 
 
 To utilize the pre-trained weights, specify the path to the weights using the --hrformer-checkpoint=<path to weights> option. It is crucial to ensure that the pre-trained weights correspond to the specified base network.
 
-![alt text](hrformer.jpg)
+![alt text](hrformer.png)
 
 If you wish to exclude the final layer of the HRFormer, include the --hrformer-remove-final-layer option. This will result in output feature maps of size 1024 instead of 2048. ( We realized training was faster )- Not necessary
   
