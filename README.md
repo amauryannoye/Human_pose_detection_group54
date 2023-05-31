@@ -67,6 +67,28 @@ Monitor the training progress:
 
 The training progress and log information will be displayed in the console.
 Checkpoints of the trained models will be saved in the directory specified in the configuration file.
+  
+This is an exemple of the hyperparameters you can use:
+  
+!python3 -m openpifpaf.train --ddp \
+  --dataset=cocokp \
+  --cocokp-square-edge=193 \
+  --cocokp-extended-scale \
+  --cocokp-orientation-invariant=0.1 \
+  --cocokp-upsample=2 \
+  --cocokp-train-annotations=/content/data-mscoco/annotations/person_keypoints_train2017.json \
+  --cocokp-val-annotations=/content/data-mscoco/annotations/person_keypoints_val2017.json \
+  --cocokp-train-image-dir=/content/data-mscoco/images/train2017/ \
+  --cocokp-val-image-dir=/content/data-mscoco/images/val2017/ \
+  --basenet=resnet50 \
+  --epochs=1 \
+  --batch-size=4 \
+  --momentum=0.95 \
+  --lr=0.001 \
+  --output /content/test/checkpoints/job.pt \
+  --log-interval=2 \
+  --basenet=hrformer_t \
+  --hrformer-checkpoint=content/hrt_tiny.pth
 
 ## Test 
   
