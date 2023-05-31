@@ -46,17 +46,30 @@ Modify the configuration file openpifpaf/config/coco.json to adjust the training
 Ensure that the paths to the COCO dataset are correctly specified in the configuration file.
 Start the training:
 
+In our case we wanted to add a hrformer backbone:
+ 
+You can use this githib to find the openpifpaf with the implementation of the hrformer:
 
 
-Download the checkpoint from the internet and add it to /content hrt_tiny.pth for the HRFormer
+https://github.com/michaelkoepf/vita-epfl-openpifpaf/tree/hrformer_backbone
+
+
 
 Regrettably, there is no simple method available to automatically download the pre-trained ImageNet1K weights without adding extra dependencies. This is due to the fact that the authors have stored the weights on OneDrive. Therefore, you will need to manually download the weights by following the instructions provided at https://github.com/HRNet/HRFormer/blob/main/cls/README.md.
 
+Once you downloaded  the checkpoint from the internet and add it to a new file in /content
+
+
+Regrettably, there is no simple method available to automatically download the pre-trained ImageNet1K weights without adding extra dependencies. This is due to the fact that the authors have stored the weights on OneDrive. Therefore, you will need to manually download the weights by following the instructions provided at https://github.com/HRNet/HRFormer/blob/main/cls/README.md.
+
+In our case we used the tiny: hrt_tiny.pth for the HRFormer
 Make sure the downloaded weights match the selected HRFormer backbone (HRFormer Tiny, Small, or Base).
 
 To utilize the pre-trained weights, specify the path to the weights using the --hrformer-checkpoint=<path to weights> option. It is crucial to ensure that the pre-trained weights correspond to the specified base network.
 
-If you wish to exclude the final layer of the HRFormer, include the --hrformer-remove-final-layer option. This will result in output feature maps of size 1024 instead of 2048. ( We realized training was faster )
+![alt text](hrformer.jpg)
+
+If you wish to exclude the final layer of the HRFormer, include the --hrformer-remove-final-layer option. This will result in output feature maps of size 1024 instead of 2048. ( We realized training was faster )- Not necessary
   
 Train by calling the cocokp data set:
   dataset=cocokp
