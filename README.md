@@ -12,6 +12,14 @@ pip python main.py
 
 ```
 
+```
+
+!pip install --upgrade pip
+!pip install --editable "."
+!pip install --editable ".[backbones,dev,test,train]"
+
+```
+
 Cloning the state of the art code:
 
 ```
