@@ -166,9 +166,10 @@ The predictions will be saved in the specified output directory.
 You can visualize or analyze the results using the provided OpenPifPaf tools or custom scripts.
 
 ## Conclusion
-OpenPifPaf with HRFormer backbone extends the capabilities of pose estimation on the COCO dataset. By following the installation, training, and inference steps outlined in this readme, you can leverage OpenPifPaf with HR
   
-![alt text](http://url/to/img.png)
+OpenPifPaf with HRFormer backbone should extends the capabilities of pose estimation on the COCO dataset. By following the installation, training, and inference steps outlined in this readme, you can leverage OpenPifPaf with HR
+  
+
   
 
 
