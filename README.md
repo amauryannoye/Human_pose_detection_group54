@@ -40,7 +40,18 @@ Update the paths to the COCO dataset in the configuration files or command-line 
   
 Download all the requirements :
 
+```
+
 pip install -r requirements.txt
+
+```
+
+```
+
+!pip install openpifpaf-vita
+!pip install matplotlib
+
+```
 
 In setup.py you can find a list of the required packages at the bottom
 
