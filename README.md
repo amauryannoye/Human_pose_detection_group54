@@ -13,7 +13,12 @@ pip python main.py
 ```
 
 Cloning the state of the art code:
+
+```
+
 !git clone https://github.com/vita-epfl/openpifpaf
+
+```
 
 Data Download:
 We directly downloaded zip files from the coco data set wesite. 
@@ -89,6 +94,8 @@ Checkpoints of the trained models will be saved in the directory specified in th
   
 This is an exemple of the hyperparameters you can use:
   
+```
+  
 !python3 -m openpifpaf.train --ddp \
   --dataset=cocokp \
   --cocokp-square-edge=193 \
@@ -108,6 +115,8 @@ This is an exemple of the hyperparameters you can use:
   --log-interval=2 \
   --basenet=hrformer_t \
   --hrformer-checkpoint=content/hrt_tiny.pth
+  
+ ```
 
 ## Test 
   
@@ -118,10 +127,14 @@ Prepare the test images:
 Place the test images in a directory of your choice.
 Perform pose estimation:
   
+```
+  
 python -m openpifpaf.predict \
     --checkpoint /path/to/checkpoint.pt \
     --image-dir /path/to/test/images/ \
     --output-dir /path/to/output/predictions/
+
+```
   
   
 Replace /path/to/checkpoint.pt with the path to the trained model checkpoint file.
